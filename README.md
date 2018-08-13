@@ -35,6 +35,7 @@ data pulled from [MarioWiki.com](https://www.mariowiki.com/Mario_Kart_8_Deluxe_i
 
 ## attributes
 
+```
 WG: Weight
 AC: Acceleration
 ON: On-Road traction
@@ -48,3 +49,4 @@ TL: Ground Handling
 TW: Water Handling
 TA: Anti-Gravity Handling
 TG: Air Handling
+```
