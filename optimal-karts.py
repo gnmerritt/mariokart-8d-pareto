@@ -56,5 +56,5 @@ def find_optimal(files, attributes):
 if __name__ == "__main__":
     # just optimize acceleration & speed for now as proof-of-concept
     data = ['characters', 'karts', 'wheels', 'gliders']
-    attributes = ['SL', 'AC', 'ON']
+    attributes = ['SL', 'AC', 'TL', 'SA']
     find_optimal(data, attributes)
