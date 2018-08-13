@@ -14,13 +14,6 @@ def read_data(files):
     return data
 
 
-def dominates(a, b):
-    for i in range(len(a)):
-        if a[i] <= b[i]:
-            return False
-    return True
-
-
 def dominated_by(a, b):
     for i in range(len(a)):
         if a[i] > b[i]:
@@ -54,12 +47,14 @@ def find_optimal(files, attributes):
             current_best = stats
 
     print(f"Got efficient possibilities")
-    for p in efficient:
-        print(f"  {p}")
+    width = 40
+    for name, stats in efficient:
+        name = " - ".join(name)
+        print(f"  {name: <60} {stats}")
 
 
 if __name__ == "__main__":
     # just optimize acceleration & speed for now as proof-of-concept
     data = ['characters', 'karts', 'wheels', 'gliders']
-    attributes = ['SL', 'AC']
+    attributes = ['SL', 'AC', 'ON']
     find_optimal(data, attributes)
