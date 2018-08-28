@@ -1,3 +1,4 @@
+import sys
 from csv import DictReader
 import itertools
 
@@ -54,7 +55,17 @@ def find_optimal(files, attributes):
 
 
 if __name__ == "__main__":
-    # just optimize acceleration & speed for now as proof-of-concept
     data = ['characters', 'karts', 'wheels', 'gliders']
-    attributes = ['SL', 'AC', 'TL', 'SA']
+    presets = {
+        'prix': ['SL', 'AC', 'TL'],
+        'timed': ['SL', 'MT', 'TL'],
+    }
+    if len(sys.argv) == 2:
+        arg = sys.argv[1]
+        if not arg in presets.keys():
+            print(f"Unrecogized preset '{arg}', available options are {presets}")
+            sys.exit(1)
+    else:
+        arg = 'prix'
+    attributes = presets[arg]
     find_optimal(data, attributes)

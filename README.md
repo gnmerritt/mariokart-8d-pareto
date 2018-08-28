@@ -23,8 +23,11 @@ Lemmy - Mr Scooty - Leaf Tyres - Peach Parasol               (1,  19, 18, 5)
 python 3.6+
 
 ```bash
-python optimal-karts.py
+python optimal-karts.py <PRESET>
 ```
+
+Where `PRESET` is one of `prix` or `timed` (you don't need acceleration in
+time trials, stop hitting the walls).
 
 You can change which attributes to include in the calculation by fiddling with
 the constants at the bottom of the script.
