@@ -57,8 +57,8 @@ def find_optimal(files, attributes):
 if __name__ == "__main__":
     data = ['characters', 'karts', 'wheels', 'gliders']
     presets = {
-        'prix': ['SL', 'AC', 'TL'],
-        'timed': ['SL', 'MT', 'TL'],
+        'prix': ['SL', 'AC', 'SG', 'MT', 'SW', 'SA'],
+        'timed': ['SL', 'MT', 'SG', 'SW', 'SA'],
     }
     if len(sys.argv) == 2:
         arg = sys.argv[1]
